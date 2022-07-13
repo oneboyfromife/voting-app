@@ -1,0 +1,144 @@
+/* HERO SECTION */
+
+/* HERO TEXT */
+.hero-section {
+    margin-top: 8rem;
+    margin-bottom: 6rem;
+    text-align: center;
+}
+
+.hero-section h2 {
+    font-size: 2.35rem;
+    color: #093F58;
+    margin-bottom: 1.8rem;
+}
+
+.hero-section h4 {
+    font-size: 1.65rem;
+    color: #1499C3;
+    line-height: 1.2;
+    width: 39vw;
+    margin: auto;
+    margin-bottom: 2rem;
+}
+
+.CTA-btn {
+    border: none;
+    font-size: 1.35rem;
+    padding: 1rem 2.8rem 1rem 3rem;
+    border-radius: 15.34px;
+    background-color: #093F58;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.CTA-btn img {
+    margin-left: 0.2rem;
+    height: auto;
+    max-width: 100%;
+    width: 1.35rem;
+}
+
+/* HERO IMAGE */
+.hero-image {
+    text-align: center;
+    margin-bottom: 8rem;
+}
+
+
+
+/* KEY FRAMES AND ANIMATIONS */
+
+#Behind_leaf_1 {
+    animation: leaf 2s ease infinite alternate;
+    transform-origin: center;
+}
+
+#Behind_leaf_2 {
+    animation: leaf 2s ease infinite alternate-reverse 1.5s;
+    transform-origin: center;
+}
+
+#Mark_1,
+#Mark_2 {
+    animation: mark 3s infinite alternate;
+}
+
+
+#circle_2 {
+    animation: circle 2.5s ease-in-out infinite alternate;
+}
+
+#circle {
+    animation: circle 2.5s ease infinite alternate-reverse;
+}
+
+@keyframes mark {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+@keyframes leaf {
+    from {
+        transform: skew(-2deg);
+    }
+
+    to {
+        transform: skew(1deg);
+    }
+}
+
+@keyframes circle {
+    from {
+        transform: scaleY(1);
+        transform: scaleX(1);
+    }
+
+    to {
+        transform: scaleY(1.1);
+        transform: scaleX(1.1);
+    }
+
+}
+
+/* MEDIA QUERRIES */
+
+@media screen and (max-width: 1550px) {
+    html {
+        font-size: 83%;
+    }
+
+}
+
+@media screen and (max-width: 1160px) {
+    .hero-section h4 {
+        width: 65vw;
+    }
+
+}
+
+@media screen and (max-width: 550px) {
+
+    html {
+        font-size: 74%;
+    }
+
+    nav {
+        min-height: 10vh;
+    }
+
+    .hero-section h4 {
+        width: 80%;
+    }
+
+    .nav-items li {
+        margin-right: 2rem;
+    }
+
+}

@@ -1,25 +1,105 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Polls</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>Vote.</title>
+    <meta charset="utf-8" />
+    <meta name=" robots" content="index, follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="../assets/Mark_2.png">
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet" />
+
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" href="../css/general.css" />
+    <link rel="stylesheet" href="../css/poll.css" />
+
 </head>
+
 <body>
-    <nav>
-        <div class="logo-name">
-            <p>Vote.</p>
-        </div>
-        <div class="navigator">
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="./pages/about.html">About</a></li>
-                <li><a href="./pages/documentation.html">Documentation</a></li>
+    <header class="main-head">
+        <nav>
+            <div class="logo">
+                <a href="/">
+                    <h1>Vote<span>.</span></h1>
+                </a>
+            </div>
+            <ul class="nav-items">
+                <li><a href="about.html">About</a></li>
+                <li><a class= "nav-active" href="#">Poll</a></li>
             </ul>
+        </nav>
+    </header>
+
+<main>
+
+    <!-- PROGRESS BAR SECTION -->
+   <section id="progress-bar-section">
+    <div class="progress edward-progress">
+        <div class="progress-img">
+            <img src="../assets/edward-img.svg" alt="">
+            <p class="edward-vote-count">61 <span>VOTES</span></p>
         </div>
-    </nav>
-    I am the poll
+        <!-- <progress id="edward-progress-bar" value="61" max="100"> 61% </progress> -->
+        <div class="progress-bar edward-progress-bar"></div>
+    </div>
+
+    <div class="progress elon-progress">
+        <div class=" progress-bar elon-progress-bar"></div>
+        <div class="progress-img">
+            <img src="../assets/elon-img.svg" alt="">
+            <p class="elon-vote-count">39 <span>VOTES</span></p>
+        </div>
+    </div>
+   </section>
+
+    <!-- FORM SECTION -->
+   <section class="form-section">
+        <h3>Vote<span>.</span></h3>
+
+        <form>
+        <div  class="state-form">
+        <label for="state">Where <span>:</span></label>
+        <select id="state" name="state">
+            <option value="new-york">New York</option>
+            <option value="alabama">Alabama</option>
+            <option value="alaska">Alaska</option>
+            <option value="arizona">Arizona</option>
+            <option value="arkansas">Arkansas</option>
+            <option value="california">California</option>
+            <option value="colorado">Colorado</option>
+            <option value="connecticut">Connecticut</option>
+            <option value="delaware">Delaware</option>
+            <option value="florida">Florida</option>
+            <option value="georgia">Georgia</option>
+        </select>
+        <img class="dropdown-arrow" src="../assets/Polygon.svg" alt="">
+        </div>
+
+        <div class="who-form" >
+            <label for="profile-img">Who <span>:</span></label>
+            <input type="image" src="../assets/ed-2.svg">
+            <input type="image" src="../assets/el-2.svg">
+        </div>
+
+    <button type="submit" class="submit-btn">Cast it <img src="../assets/Mark_2.svg" alt="Tick Mark" /></button>
+</form>
+
+    </div>
+   </section>
+</main>
+
+    <!-- FOOTER -->
+     <footer>
+        <h6> &copy Group 10</h6>
+    </footer>
+
 </body>
+
 </html>
