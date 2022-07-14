@@ -1,8 +1,15 @@
+.total-votes-h2 {
+    margin-top: 4.5rem;
+    text-align: center;
+    font-size: 1.6rem;
+    color: #093F58;
+}
+
 
 /* PROGRESS BAR */
 #progress-bar-section {
     width: 90%;
-    margin: 4rem auto 2rem;
+    margin: 0 auto 2rem;
     display: flex;
     flex-direction: row;
 }
@@ -17,13 +24,17 @@
 .progress-img p {
    text-align: center;
    padding-top: 1.5rem;
-   font-size: 1.4rem;
+   font-size: 1.2rem;
+}
+
+.progress-img img {
+    width: 96px;
 }
 
 .progress-bar{
-    margin-bottom: 2.8rem;
+    margin-bottom: 2.65rem;
     flex: 1;
-    height: 40px;
+    height: 36.5px;
 }
 
 
@@ -63,11 +74,11 @@ span {
 .form-section h3{
     margin-top: 2.5rem;
     margin-bottom: 2.5rem;
-    font-size: 2.2rem;
+    font-size: 2rem;
 }
 
 label {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
 }
 
 form {
@@ -85,7 +96,7 @@ label span{
 }
 
 .who-form{
-    margin-left: 3.5rem;
+    margin-left: 3rem;
 }
 
 select {
@@ -109,9 +120,6 @@ select {
     top: 18px;
 }
 
-.who-form label {
-    margin-right: 1rem;
-}
 
 .who-form input {
     vertical-align: middle;
@@ -126,7 +134,7 @@ select {
     box-shadow: 0px 4px 4px rgba(9, 63, 88, 0.1);
     border-radius: 15.3385px;
     color: white;
-    font-size: 1.35rem;
+    font-size: 1.3rem;
     font-family: 'Josefin Sans', sans-serif;
     margin-bottom: 2rem;
 }
@@ -142,25 +150,42 @@ select {
 /* MEDIA QUERRIES */
 @media screen and (max-width: 1550px) {
     html {
-        font-size: 83%;
+        font-size: 75%;
     }
 
     .who-form {
          margin-left: 5.5rem;
     }
 
-}
+        .progress-img img {
+            width: 5.5rem;
+        }
 
-@media screen and (max-width: 1550px) {
-    .dropdown-arrow {
-        top: 15px;
+
+        .progress-bar {
+            height: 25px;
+            margin-bottom: 2.65rem;
+        }
+
+    .who-form input {
+        width: 60px;
+
     }
+
+    .who-form {
+        margin-left: 1.6rem;
+    }
+
+        .dropdown-arrow {
+            top: 13px;
+        }
+
 }
 
 @media screen and (max-width: 820px) {
 
     html {
-        font-size: 70%;
+        font-size: 65%;
     }
 
     nav {
@@ -185,15 +210,24 @@ select {
         }
 
     .progress-img img{
-        width: 6.5rem;
+        width: 5rem;
+    }
+
+    .progress-img p {
+        font-size: 1rem;
+    }
+
+    .total-votes-h2 {
+        font-size: 1.3rem;
     }
 
      .progress-bar {
-        height: 28px;
+        height: 19.8px;
+        margin-bottom: 2.48rem;
         }
 
     .dropdown-arrow {
-        top: 13px;
+        top: 11px;
     }
 
 }
