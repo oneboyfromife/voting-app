@@ -20,6 +20,10 @@
     <link rel="stylesheet" href="../css/general.css" />
     <link rel="stylesheet" href="../css/poll.css" />
 
+    <!-- MAP JS -->
+    <script type="text/javascript" src="../js/mapdata.js"></script>
+    <script type="text/javascript" src="../js/usmap.js"></script>
+
 </head>
 
 <body>
@@ -86,8 +90,8 @@
 
         <div class="who-form" >
             <label for="profile-img">Who <span>:</span></label>
-            <input class="who-form-img" type="image" src="../assets/ed-2.svg">
-            <input class="who-form-img" type="image" src="../assets/el-2.svg">
+            <input class="who-form-img" type="image" value= "1" src="../assets/ed-2.svg">
+            <input class="who-form-img" type="image" value= "2" src="../assets/el-2.svg">
         </div>
 
     <button type="submit" class="submit-btn">Cast it <img src="../assets/Mark_2.svg" alt="Tick Mark" /></button>
@@ -95,6 +99,12 @@
 
     </div>
    </section>
+
+<!-- MAP -->
+<div class="js-usmap">
+    <div id="map"></div>
+</div>
+
 </main>
 
     <!-- FOOTER -->
@@ -102,6 +112,8 @@
         <h6> &copy Group 10</h6>
     </footer>
 
+<!-- SCRIPT -->
+<script src="../js/script.js"></script>
 </body>
 
 </html>

@@ -146,6 +146,17 @@ select {
     cursor: pointer;
 }
 
+/* MAP */
+.js-usmap{
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+}
+
 
 /* MEDIA QUERRIES */
 @media screen and (max-width: 1550px) {
@@ -236,5 +247,10 @@ select {
     .form-section {
             height: 38%;
         }
+
+    .js-usmap {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
 
 }
