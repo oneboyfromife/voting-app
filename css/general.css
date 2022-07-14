@@ -46,6 +46,10 @@ svg {
   background-color: #093F58;
 }
 
+.nav-active {
+  color: #1499C3;
+}
+
 nav {
   width: 90%;
   margin: auto;
