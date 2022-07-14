@@ -67,7 +67,7 @@ span {
     margin: auto;
     border: 1px #FCFEFF solid;
     border-radius: 20px;
-    box-shadow: 3px 4px 150px -90px rgba(9, 63, 88, 0.7);
+    box-shadow: 3px 4px 150px -90px rgb(9, 63, 88);
     margin-bottom: 5rem;
 }
 
@@ -249,7 +249,7 @@ select {
         }
 
     .js-usmap {
-        margin-top: 0;
+        margin-top: 3rem;
         margin-bottom: 0;
     }
 
