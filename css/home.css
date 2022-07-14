@@ -2,7 +2,7 @@
 
 /* HERO TEXT */
 .hero-section {
-    margin-top: 8rem;
+    margin-top: 6rem;
     margin-bottom: 6rem;
     text-align: center;
 }
@@ -61,7 +61,7 @@
 
 #Mark_1,
 #Mark_2 {
-    animation: mark 3s infinite alternate;
+    animation: mark 2.5s infinite alternate;
 }
 
 
@@ -111,7 +111,7 @@
 
 @media screen and (max-width: 1550px) {
     html {
-        font-size: 83%;
+        font-size: 78%;
     }
 
 }
@@ -126,7 +126,7 @@
 @media screen and (max-width: 550px) {
 
     html {
-        font-size: 74%;
+        font-size: 70%;
     }
 
     nav {
