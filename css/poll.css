@@ -1,8 +1,24 @@
 .total-votes-h2 {
     margin-top: 4.5rem;
+    margin-bottom: 1.5rem;
     text-align: center;
     font-size: 1.6rem;
     color: #093F58;
+}
+
+.names{
+display: flex;
+width: 88.5%;
+margin:1rem auto;
+flex-direction: row;
+font-size: 1.2rem;
+text-align: center;
+color: #093F58;
+}
+
+.names p:nth-child(2){
+    margin-left: auto;
+    margin-right: 1rem;
 }
 
 
@@ -233,8 +249,8 @@ select {
     }
 
      .progress-bar {
-        height: 19.8px;
-        margin-bottom: 2.48rem;
+        height: 19.9px;
+        margin-bottom: 2.5rem;
         }
 
     .dropdown-arrow {

@@ -1,148 +1,136 @@
-:root
-    {
-    --header-height: 3rem;
-
-    --white-color-lightness:100%;
-
-    --color-white: rgb(246, 254, 255);
-    --color-light: hsl(192, 83%, 84%);
-    --color-gray: hsl(252, 15%, 65%);
-    --color-primary: hsl(198, 97%, 13%);
-    --color-dark: rgb(7, 119, 134);
-
-    /*========== Font and typography ==========*/
-    /*.5rem = 8px | 1rem = 16px ...*/
-    --body-font: 'Josefin Sans', sans-serif;
-    --h1-font-size: 2.25rem;
-    --h2-font-size: 1.75rem;
-    --h3-font-size: 1.25rem;
-    --normal-font-size: 1rem;
-    --small-font-size: .875rem;
-
-    /*========== Font weight ==========*/
-    --font-light: 300;
-    --font-normal: 400;
-    --font-medium: 500;
-    --font-semi-bold: 700;
-
-    /*========== Margenes Bottom ==========*/
-    /*.5rem = 8px | 1rem = 16px ...*/
-    --m-0-5: .5rem;
-    --m-0-75: .75rem;
-    --m-1: 1rem;
-    --m-1-5: 1.5rem;
-    --m-2: 2rem;
-    --m-2-5: 2.5rem;
-
-    /*========== Card padding ==========*/
-    --card-padding:1.9rem 0.95rem;
-
-    /*========== Border radius ==========*/
-    --border-radius: 1.25rem;
-
-    /*========== Box shadow ==========*/
-    --box-shadow: 0px 5px 20px 0px rgba(69, 67, 96, 0.1);
-  }
-  /*========== Reusable Class ==========*/
-  .padd-15{
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-  .row{
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-
-  *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-  }
-  body,input,button,textarea{
-    font-family: var(--body-font);
-    font-size: var(--normal-font-size);
-  }
-  body{
-    background-color: white;
-    color: var(--color-dark);
-    line-height: 1.7;
-    font-weight: var(--font-medium);
-    height: 100vh;
-  }
-  img{
-    max-width: 100%;
-    height: auto;
-    vertical-align: middle;
-  }
-  ul{
-    list-style: none;
-  }
-  a{
-    text-decoration: none;
-    color: var(--color-dark);
-  }
-  h1,h2,h3{
-    font-weight: var(--font-semi-bold);
-  }
-  h1{
-    font-size: var(--h1-font-size);
-  }
-  h2{
-    font-size: var(--h2-font-size);
-  }
-  h3{
-    font-size: var(--h3-font-size);
-  }
-
-main{
-    margin: auto;
-    padding-top: 30px;
+.main{
+  width: 90vw;
+  margin: 5rem auto;
+  position: relative;
 }
-.chat{
-    width: 65%;
+
+.flex{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
 }
-.chat-left{
-    margin-left: 20px;
+
+.edward-section{
+  margin-bottom: 6rem;
 }
-.chat-right{
-    margin-top: 50px;
+
+.edward-avatar{
+  margin-right: 3rem;
 }
-.align-right{
-    display: flex;
-    justify-content: right;
-}
-.avatar{
-    flex: 0 0 25%;
-    max-width: 25%;
-}
-.chat img{
-    width: 50px;
-}
-.chat-content{
-    flex: 0 0 75%;
-    max-width: 75%;
+
+.text-container{
     background-color: #DFF6FF;
-    border-radius: var(--border-radius);
-    padding: var(--card-padding);
-}
-.chat-content p{
-    color: hsl(235, 21%, 11%);
-}
-.chat-content h2{
-    color: var(--color-dark);
-}
-.chat-content-1{
-    margin-left: -60px;
-}
-.chat-content-2{
-    text-align: right;
+    width: 60%;
+    border-radius: 20px;
 }
 
-.chat-icon{
-    display: flex;
-    justify-content: right;
-    align-items: baseline;
-    padding-right: 20px;
+.left-container {
+  margin-right: auto;
+  padding: 2rem 4rem 2rem 3rem;
+  text-align: left;
+}
+
+.text h2 {
+  font-size: 1.65rem;
+  color: #1499C3;
+  margin-bottom: 1.4rem;
+}
+
+.text p{
+  font-size: 1.2rem;
+  line-height: 1.7;
+  width: 90%;
+  color: #093F58;
+}
+
+.right-container {
+  margin-left: auto;
+  padding: 2rem 3rem 2rem 4rem;
+  text-align: right;
+}
+
+.elon-text p {
+  margin-left: auto;
+}
+
+.elon-avatar {
+  margin-left: 3rem;
+}
+
+.elon-section {
+  margin-bottom: 6rem;
+}
+
+
+.stars-container img{
+  max-width: 30%;
+  height: auto;
+  position: absolute;
+  top: -60px;
+  left: -100px;
+}
+
+
+/* MEDIA QUERRIES */
+
+@media screen and (max-width: 1550px) {
+  html {
+    font-size: 75%;
+  }
+
+    .stars-container img {
+      max-width: 30%;
+      height: auto;
+      position: absolute;
+      top: -60px;
+      left: -70px;
+    }
+
+}
+
+@media screen and (max-width: 912px) {
+
+  html {
+    font-size: 65%;
+  }
+
+    .stars-container img {
+      max-width: 40%;
+      top: 4px;
+      left: -50px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+.avatar img {
+    width: 50px;
+  }
+
+  .edward-avatar {
+    margin-right: 1rem;
+  }
+
+.elon-avatar {
+  margin-left: 1rem;
+}
+
+.text-container {
+  width: 100%;
+}
+
+.text p {
+  line-height: 1.4;
+  width: 100%;
+}
+
+.right-container, .left-container {
+  padding: 2rem;
+}
+
+.stars-container img {
+  max-width: 50%;
+  top: 120px;
+  left: -20px;
+}
 }

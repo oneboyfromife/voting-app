@@ -111,22 +111,22 @@
 
 @media screen and (max-width: 1550px) {
     html {
-        font-size: 78%;
+        font-size: 75%;
     }
 
 }
 
-@media screen and (max-width: 1160px) {
+@media screen and (max-width: 820px) {
     .hero-section h4 {
-        width: 65vw;
-    }
+            width: 60%;
+        }
 
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 600px) {
 
     html {
-        font-size: 70%;
+        font-size: 65%;
     }
 
     nav {
