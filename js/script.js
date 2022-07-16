@@ -145,7 +145,7 @@ function voteEvent(e){
 function mapEvent () {
     switch(state.value) {
     // NEW YORK
-        case "new-york" :
+        case "NY" :
         if (candidate === "edwardCount") {
          NY_ED++;
         }
@@ -155,7 +155,7 @@ function mapEvent () {
          break;
 
     // GEORGIA
-         case "georgia" :
+         case "GA" :
         if (candidate === "edwardCount") {
          GA_ED++;
         }
@@ -165,7 +165,7 @@ function mapEvent () {
          break;
 
      // ALABAMA
-         case "alabama" :
+         case "AL" :
         if (candidate === "edwardCount") {
          AL_ED++;
         }
@@ -175,7 +175,7 @@ function mapEvent () {
          break;
 
     // ALASKA
-         case "alaska" :
+         case "AK" :
         if (candidate === "edwardCount") {
          AK_ED++;
         }
@@ -185,7 +185,7 @@ function mapEvent () {
          break;
 
     // ARIZONA
-         case "arizona" :
+         case "AZ" :
         if (candidate === "edwardCount") {
          AZ_ED++;
         }
@@ -195,7 +195,7 @@ function mapEvent () {
          break;
 
     // ARKANSAS
-         case "arkansas" :
+         case "AR" :
         if (candidate === "edwardCount") {
          AR_ED++;
         }
@@ -205,7 +205,7 @@ function mapEvent () {
          break;
 
     // CALIFORNIA
-         case "california" :
+         case "CA" :
         if (candidate === "edwardCount") {
          CA_ED++;
         }
@@ -215,7 +215,7 @@ function mapEvent () {
          break;
 
     // COLORADO
-         case "colorado" :
+         case "CO" :
         if (candidate === "edwardCount") {
          CO_ED++;
         }
@@ -225,7 +225,7 @@ function mapEvent () {
          break;
 
     // CONNECTIUIT
-         case "montana" :
+         case "MT" :
         if (candidate === "edwardCount") {
          MT_ED++;
         }
@@ -235,7 +235,7 @@ function mapEvent () {
          break;
 
     // TEXAS
-         case "texas" :
+         case "TX" :
         if (candidate === "edwardCount") {
          TX_ED++;
         }
@@ -245,7 +245,7 @@ function mapEvent () {
          break;
 
  // FLORIDA
-         case "florida" :
+         case "FL" :
         if (candidate === "edwardCount") {
          FL_ED++;
         }
@@ -261,236 +261,25 @@ function mapEvent () {
 
 
 // CHANGE COLOR BASED ON NUMBER OF VOTES
-    // NEW YORK
-    if(NY_ED || NY_EL != 0) {
-       simplemaps_usmap_mapdata.state_specific['NY'].description=`Edward:${NY_ED} and Elon:${NY_EL}`;
+if(eval(`${state.value}_ED`) || eval(`${state.value}_EL`) != 0) {
 
-       if (NY_ED > NY_EL){
-           simplemaps_usmap_mapdata.state_specific['NY'].color='#1499C3';
+       simplemaps_usmap_mapdata.state_specific[state.value].description= "Edward:"+ eval(state.value+"_ED") + " and Elon:" + eval(state.value+"_EL");
+
+       if (eval(`${state.value}_ED`) > eval(`${state.value}_EL`)){
+           simplemaps_usmap_mapdata.state_specific[state.value].color='#1499C3';
             simplemaps_usmap.refresh();
          }
 
-         else if (NY_EL > NY_ED){
-           simplemaps_usmap_mapdata.state_specific['NY'].color='#DFF6FF';
+         else if (eval(`${state.value}_EL`) > eval(`${state.value}_ED`)){
+           simplemaps_usmap_mapdata.state_specific[state.value].color='#DFF6FF';
             simplemaps_usmap.refresh();
          }
 
          else
          {
-            simplemaps_usmap_mapdata.state_specific['NY'].color="#2c3b47";
+            simplemaps_usmap_mapdata.state_specific[state.value].color="#2c3b47";
             simplemaps_usmap.refresh();
          }
      }
-
-    // GEORGIA
-     if(GA_ED || GA_EL != 0) {
-      simplemaps_usmap_mapdata.state_specific['GA'].description=`Edward:${GA_ED} and Elon:${GA_EL}`;
-
-         if (GA_ED > GA_EL){
-           simplemaps_usmap_mapdata.state_specific['GA'].color='#1499C3';
-            simplemaps_usmap.refresh();
-         }
-
-         else if (GA_EL > GA_ED){
-           simplemaps_usmap_mapdata.state_specific['GA'].color='#DFF6FF';
-            simplemaps_usmap.refresh();
-         }
-
-      else
-         {
-            simplemaps_usmap_mapdata.state_specific['GA'].color="#2c3b47";
-            simplemaps_usmap.refresh();
-         }
-    }
-
-    // ALABAMA
-     if(AL_ED || AL_EL != 0) {
-        simplemaps_usmap_mapdata.state_specific['AL'].description=`Edward:${AL_ED} and Elon:${AL_EL}`;
-
-         if (AL_ED > AL_EL){
-           simplemaps_usmap_mapdata.state_specific['AL'].color='#1499C3';
-            simplemaps_usmap.refresh();
-         }
-
-         else if (AL_EL > AL_ED){
-           simplemaps_usmap_mapdata.state_specific['AL'].color='#DFF6FF';
-            simplemaps_usmap.refresh();
-         }
-
-      else
-         {
-            simplemaps_usmap_mapdata.state_specific['AL'].color="#2c3b47";
-            simplemaps_usmap.refresh();
-         }
-    }
-
-    // ALASKA
-     if(AK_ED || AK_EL != 0) {
-     simplemaps_usmap_mapdata.state_specific['AK'].description=`Edward:${AK_ED} and Elon:${AK_EL}`;
-
-         if (AK_ED > AK_EL){
-           simplemaps_usmap_mapdata.state_specific['AK'].color='#1499C3';
-            simplemaps_usmap.refresh();
-         }
-
-         else if (AK_EL > AK_ED){
-           simplemaps_usmap_mapdata.state_specific['AK'].color='#DFF6FF';
-            simplemaps_usmap.refresh();
-         }
-
-      else
-         {
-            simplemaps_usmap_mapdata.state_specific['AK'].color="#2c3b47";
-            simplemaps_usmap.refresh();
-         }
-    }
-
-    // ARIZONA
-     if(AZ_ED || AZ_EL != 0) {
-     simplemaps_usmap_mapdata.state_specific['AZ'].description=`Edward:${AZ_ED} and Elon:${AZ_EL}`;
-
-         if (AZ_ED > AZ_EL){
-           simplemaps_usmap_mapdata.state_specific['AZ'].color='#1499C3';
-            simplemaps_usmap.refresh();
-         }
-
-         else if (AZ_EL > AZ_ED){
-           simplemaps_usmap_mapdata.state_specific['AZ'].color='#DFF6FF';
-            simplemaps_usmap.refresh();
-         }
-
-      else
-         {
-            simplemaps_usmap_mapdata.state_specific['AZ'].color="#2c3b47";
-            simplemaps_usmap.refresh();
-         }
-    }
-
-    // ARKANSAS
-     if(AR_ED || AR_EL != 0) {
-     simplemaps_usmap_mapdata.state_specific['AR'].description=`Edward:${AR_ED} and Elon:${AR_EL}`;
-
-         if (AR_ED > AR_EL){
-           simplemaps_usmap_mapdata.state_specific['AR'].color='#1499C3';
-            simplemaps_usmap.refresh();
-         }
-
-         else if (AR_EL > AR_ED){
-           simplemaps_usmap_mapdata.state_specific['AR'].color='#DFF6FF';
-            simplemaps_usmap.refresh();
-         }
-
-      else
-         {
-            simplemaps_usmap_mapdata.state_specific['AR'].color="#2c3b47";
-            simplemaps_usmap.refresh();
-         }
-    }
-
-    // CALIFONRIA
-     if(CA_ED || CA_EL != 0) {
-     simplemaps_usmap_mapdata.state_specific['CA'].description=`Edward:${CA_ED} and Elon:${CA_EL}`;
-
-         if (CA_ED > CA_EL){
-           simplemaps_usmap_mapdata.state_specific['CA'].color='#1499C3';
-            simplemaps_usmap.refresh();
-         }
-
-         else if (CA_EL > CA_ED){
-           simplemaps_usmap_mapdata.state_specific['CA'].color='#DFF6FF';
-            simplemaps_usmap.refresh();
-         }
-
-      else
-         {
-            simplemaps_usmap_mapdata.state_specific['CA'].color="#2c3b47";
-            simplemaps_usmap.refresh();
-         }
-    }
-
-     // COLORADO
-     if(CO_ED || CO_EL != 0) {
-     simplemaps_usmap_mapdata.state_specific['CO'].description=`Edward:${CO_ED} and Elon:${CO_EL}`;
-
-         if (CO_ED > CO_EL){
-           simplemaps_usmap_mapdata.state_specific['CO'].color='#1499C3';
-            simplemaps_usmap.refresh();
-         }
-
-         else if (CO_EL > CO_ED){
-           simplemaps_usmap_mapdata.state_specific['CO'].color='#DFF6FF';
-            simplemaps_usmap.refresh();
-         }
-
-      else
-         {
-            simplemaps_usmap_mapdata.state_specific['CO'].color="#2c3b47";
-            simplemaps_usmap.refresh();
-         }
-    }
-
-    // CONNECTICUT
-     if(MT_ED || MT_EL != 0) {
-     simplemaps_usmap_mapdata.state_specific['MT'].description=`Edward:${MT_ED} and Elon:${MT_EL}`;
-
-         if (MT_ED > MT_EL){
-           simplemaps_usmap_mapdata.state_specific['MT'].color='#1499C3';
-            simplemaps_usmap.refresh();
-         }
-
-         else if (MT_EL > MT_ED){
-           simplemaps_usmap_mapdata.state_specific['MT'].color='#DFF6FF';
-            simplemaps_usmap.refresh();
-         }
-
-      else
-         {
-            simplemaps_usmap_mapdata.state_specific['MT'].color="#2c3b47";
-            simplemaps_usmap.refresh();
-         }
-    }
-
-    // TEXAS
-     if(TX_ED || TX_EL != 0) {
-     simplemaps_usmap_mapdata.state_specific['TX'].description=`Edward:${TX_ED} and Elon:${TX_EL}`;
-
-         if (TX_ED > TX_EL){
-           simplemaps_usmap_mapdata.state_specific['TX'].color='#1499C3';
-            simplemaps_usmap.refresh();
-         }
-
-         else if (TX_EL > TX_ED){
-           simplemaps_usmap_mapdata.state_specific['TX'].color='#DFF6FF';
-            simplemaps_usmap.refresh();
-         }
-
-      else
-         {
-            simplemaps_usmap_mapdata.state_specific['TX'].color="#2c3b47";
-            simplemaps_usmap.refresh();
-         }
-    }
-
-  // FLORIDA
-     if(FL_ED || FL_EL != 0) {
-     simplemaps_usmap_mapdata.state_specific['FL'].description=`Edward:${FL_ED} and Elon:${FL_EL}`;
-
-         if (FL_ED > FL_EL){
-           simplemaps_usmap_mapdata.state_specific['FL'].color='#1499C3';
-            simplemaps_usmap.refresh();
-         }
-
-         else if (FL_EL > FL_ED){
-           simplemaps_usmap_mapdata.state_specific['FL'].color='#DFF6FF';
-            simplemaps_usmap.refresh();
-         }
-
-      else
-         {
-            simplemaps_usmap_mapdata.state_specific['FL'].color="#2c3b47";
-            simplemaps_usmap.refresh();
-         }
-    }
-
 
 }
