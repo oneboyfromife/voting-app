@@ -118,7 +118,7 @@ label span{
 select {
     -webkit-appearance: none;
     appearance: none;
-    padding: 0.7rem 2rem;
+    padding: 0.7rem 2.3rem 0.7rem 1.3rem;
     font-size: 1.2rem;
     font-family: 'Josefin Sans', sans-serif;
     color: #093F58;
