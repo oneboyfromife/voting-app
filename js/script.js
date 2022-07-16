@@ -88,14 +88,14 @@ function updateVoteTotal(el, ed){
 
 // function calcPercentage of vote
 function getPercent(x, t){
-    return Math.floor(x/t*100);
+    return Math.round(x/t*100);
 }
 
 // refresh progresschart
 function refreshProgress(elon,edward, total){
     elonprogress = getPercent(elon,total);
     edwardprogress = getPercent(edward,total);
-        
+
     // update progress chart
     elonChart.style.width = String(elonprogress)+"%";
     edwardChart.style.width = String(edwardprogress) +"%";
@@ -114,7 +114,7 @@ function voteEvent(e){
                 spanElon.innerText = elonCont;
                 refreshProgress(elonCont, edwardCount, totalvotes)
                 alert(getSplashScreen("Elon Musk", elonCont, elonprogress, state.value));
-    
+
             }else if(candidate === "edwardCount"){
                 edwardCount += 1;
                 updateVoteTotal(elonCont, edwardCount);

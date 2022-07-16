@@ -24,18 +24,24 @@ color: #093F58;
 
 /* PROGRESS BAR */
 #progress-bar-section {
-    width: 90%;
+    max-width: 90%;
     margin: 0 auto 2rem;
     display: flex;
     flex-direction: row;
 }
 
-.progress {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+.progress{
+display: flex;
+align-items: center;
 }
 
+.edward-progress {
+    flex-direction: row;
+}
+
+.elon-progress{
+    flex-direction: row-reverse;
+}
 
 .progress-img p {
    text-align: center;
@@ -45,6 +51,17 @@ color: #093F58;
 
 .progress-img img {
     width: 96px;
+    z-index: 100;
+}
+
+.elon-progress-img {
+    margin-left: auto;
+    z-index: 10;
+}
+
+.edward-progress-img{
+    margin-right: auto;
+    z-index: 10;
 }
 
 .progress-bar{
