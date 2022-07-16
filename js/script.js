@@ -1,6 +1,5 @@
 // elements
 var vote_btn = document.querySelector(".submit-btn");
-var stateSelect = document.querySelectorAll("select")[0];
 var candidateSelect = document.querySelectorAll(".who-form-img");
 
 var spanElon = document.querySelector(".elon-vote-count");
@@ -20,6 +19,9 @@ let elonCont = 0;
 let edwardCount = 0;
 let totalvotes = 0;
 let candidate = "";
+let elonprogress = 0;
+let edwardprogress = 0;
+let splashScreen = "";
 
 // STATE VARIABLES
 let NY_ED = 0;
@@ -47,7 +49,6 @@ let MT_EL = 0;
 let FL_ED = 0;
 let FL_EL = 0;
 
-
 // getting img id
 for(var x = 0; x<2; x++){
     candidateSelect[x].addEventListener("click", function(e){
@@ -67,17 +68,34 @@ for(var x = 0; x<2; x++){
     })
 }
 
+// get Splash Message
+function getSplashScreen(candidate, votes, chart, state){
+    let msg = `DETAILS
+    ===============================
+     voted: ${candidate}
+     state: ${state}
+     votes: ${votes}
+     ${candidate} chart: ${chart}%
+     Thanks for voting
+    ===============================`
+     return msg;
+}
+
 // calculate total votes of the contestants
 function updateVoteTotal(el, ed){
     totalvotes = el + ed;
-    voteTotal.innerText = String(totalvotes);
+}
+
+// function calcPercentage of vote
+function getPercent(x, t){
+    return Math.floor(x/t*100);
 }
 
 // refresh progresschart
 function refreshProgress(elon,edward, total){
-    let elonprogress = Math.floor(elon/total*100);
-    let edwardprogress = Math.floor(edward/total*100);
-
+    elonprogress = getPercent(elon,total);
+    edwardprogress = getPercent(edward,total);
+        
     // update progress chart
     elonChart.style.width = String(elonprogress)+"%";
     edwardChart.style.width = String(edwardprogress) +"%";
@@ -89,21 +107,25 @@ vote_btn.addEventListener("click", voteEvent)
 function voteEvent(e){
     e.preventDefault();
     if (candidate !== ""){
-        if (candidate === "elonCount"){
-            alert("you have selected Elon");
-            elonCont += 1
-            spanElon.innerText = elonCont;
-            refreshProgress(elonCont, edwardCount, totalvotes)
-
-        }else if(candidate === "edwardCount"){
-            alert("you have selected Edward");
-            edwardCount += 1;
-            spanEdward.innerText = edwardCount;
-            refreshProgress(elonCont, edwardCount, totalvotes)
+        if(totalvotes < 100){
+            if (candidate === "elonCount"){
+                elonCont += 1
+                updateVoteTotal(elonCont, edwardCount);
+                spanElon.innerText = elonCont;
+                refreshProgress(elonCont, edwardCount, totalvotes)
+                alert(getSplashScreen("Elon Musk", elonCont, elonprogress, state.value));
+    
+            }else if(candidate === "edwardCount"){
+                edwardCount += 1;
+                updateVoteTotal(elonCont, edwardCount);
+                spanEdward.innerText = edwardCount;
+                refreshProgress(elonCont, edwardCount, totalvotes)
+                alert(getSplashScreen("Edward Cambell", edwardCount, edwardprogress, state.value));
+            }
+            voteTotal.innerText = String(totalvotes);
+        }else{
+            alert("Votes are closed for now")
         }
-
-        // update total votes label
-        updateVoteTotal(elonCont, edwardCount);
     }
     else{
         alert("Please choose a candidate!")
