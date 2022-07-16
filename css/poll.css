@@ -118,7 +118,7 @@ label span{
 select {
     -webkit-appearance: none;
     appearance: none;
-    padding: 0.7rem 1.5rem;
+    padding: 0.7rem 2rem;
     font-size: 1.2rem;
     font-family: 'Josefin Sans', sans-serif;
     color: #093F58;
@@ -132,8 +132,8 @@ select {
     cursor: pointer;
     width: 0.9rem;
     position: absolute;
-    right: 16px ;
-    top: 18px;
+    right: 13px ;
+    top: 17px;
 }
 
 
@@ -153,6 +153,7 @@ select {
     font-size: 1.3rem;
     font-family: 'Josefin Sans', sans-serif;
     margin-bottom: 2rem;
+    cursor: pointer;
 }
 
 .submit-btn img {
@@ -173,6 +174,10 @@ select {
     height: auto;
 }
 
+.opacity{
+    opacity: 0.3;
+    transform: scale(0.7);
+}
 
 /* MEDIA QUERRIES */
 @media screen and (max-width: 1550px) {
