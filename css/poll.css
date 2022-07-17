@@ -129,7 +129,7 @@ label span{
 }
 
 .who-form{
-    margin-left: 3rem;
+    margin-left: 0.4rem;
 }
 
 select {
@@ -156,7 +156,7 @@ select {
 
 .who-form input {
     vertical-align: middle;
-    margin-right: 1rem;
+    margin-left: 1rem;
 }
 
 .submit-btn {
@@ -202,32 +202,26 @@ select {
         font-size: 75%;
     }
 
-    .who-form {
-         margin-left: 5.5rem;
+    .progress-img img {
+        width: 5.5rem;
     }
 
-        .progress-img img {
-            width: 5.5rem;
-        }
-
-
-        .progress-bar {
-            height: 25px;
-            margin-bottom: 2.65rem;
+    .progress-bar {
+        height: 25px;
+        margin-bottom: 2.65rem;
         }
 
     .who-form input {
         width: 60px;
-
     }
 
     .who-form {
-        margin-left: 1.6rem;
+        margin-left: -0.9rem;
     }
 
-        .dropdown-arrow {
-            top: 13px;
-        }
+    .dropdown-arrow {
+        top: 13px;
+    }
 
 }
 
@@ -248,10 +242,6 @@ select {
     .form-section {
         width: 70vw;
         height: 52vh;
-    }
-
-    .who-form {
-        margin-left: 2rem;
     }
 
     .who-form input {
