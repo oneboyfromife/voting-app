@@ -23,53 +23,11 @@ let elonprogress = 0;
 let edwardprogress = 0;
 let splashScreen = "";
 
-// STATE VARIABLES
-let NY_ED = 0;
-let NY_EL = 0;
-let GA_ED = 0;
-let GA_EL = 0;
-let AL_ED = 0;
-let AL_EL = 0;
-let AK_ED = 0;
-let AK_EL = 0;
-let AZ_ED = 0;
-let AZ_EL = 0;
-let AR_ED = 0;
-let AR_EL = 0;
-let CA_ED = 0;
-let CA_EL = 0;
-let CO_ED = 0;
-let CO_EL = 0;
-let CT_ED = 0;
-let CT_EL = 0;
-let TX_ED = 0;
-let TX_EL = 0;
-let MT_ED = 0;
-let MT_EL = 0;
-let FL_ED = 0;
-let FL_EL = 0;
-let HI_ED = 0;
-let HI_EL = 0;
-let ID_ED = 0;
-let ID_EL = 0;
-let IL_ED = 0;
-let IL_EL = 0;
-let IN_ED = 0;
-let IN_EL = 0;
-let IA_ED = 0;
-let IA_EL = 0;
-let KS_ED = 0;
-let KS_EL = 0;
-let KY_ED = 0;
-let KY_EL = 0;
-let LA_ED = 0;
-let LA_EL = 0;
-let ME_ED = 0;
-let ME_EL = 0;
-let MD_ED = 0;
-let MD_EL = 0;
-let DE_ED = 0;
-let DE_EL = 0;
+// CREATE DYNAMIC STATE VARIABLES
+for(i = 0; i < 49; i++) {
+    window[state[i].value + "_ED"] = 0;
+     window[state[i].value + "_EL"] = 0;
+}
 
 // getting img id
 for(var x = 0; x<2; x++){
