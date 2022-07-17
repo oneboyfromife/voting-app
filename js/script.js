@@ -48,6 +48,28 @@ let MT_ED = 0;
 let MT_EL = 0;
 let FL_ED = 0;
 let FL_EL = 0;
+let HI_ED = 0;
+let HI_EL = 0;
+let ID_ED = 0;
+let ID_EL = 0;
+let IL_ED = 0;
+let IL_EL = 0;
+let IN_ED = 0;
+let IN_EL = 0;
+let IA_ED = 0;
+let IA_EL = 0;
+let KS_ED = 0;
+let KS_EL = 0;
+let KY_ED = 0;
+let KY_EL = 0;
+let LA_ED = 0;
+let LA_EL = 0;
+let ME_ED = 0;
+let ME_EL = 0;
+let MD_ED = 0;
+let MD_EL = 0;
+let DE_ED = 0;
+let DE_EL = 0;
 
 // getting img id
 for(var x = 0; x<2; x++){
@@ -140,125 +162,17 @@ function voteEvent(e){
     candidate = ""
 }
 
-
  // UPDATE VOTE VARIABLE FOR EACH STATE ON THE MAP
 function mapEvent () {
-    switch(state.value) {
-    // NEW YORK
-        case "NY" :
-        if (candidate === "edwardCount") {
-         NY_ED++;
-        }
-        else if (candidate === "elonCount") {
-         NY_EL++;
-         }
-         break;
+    if (candidate === "edwardCount")
+     {
+        eval(`${state.value}_ED ++`);
+     }
 
-    // GEORGIA
-         case "GA" :
-        if (candidate === "edwardCount") {
-         GA_ED++;
-        }
-        else if (candidate === "elonCount") {
-         GA_EL++;
-         }
-         break;
-
-     // ALABAMA
-         case "AL" :
-        if (candidate === "edwardCount") {
-         AL_ED++;
-        }
-        else if (candidate === "elonCount") {
-         AL_EL++;
-         }
-         break;
-
-    // ALASKA
-         case "AK" :
-        if (candidate === "edwardCount") {
-         AK_ED++;
-        }
-        else if (candidate === "elonCount") {
-         AK_EL++;
-         }
-         break;
-
-    // ARIZONA
-         case "AZ" :
-        if (candidate === "edwardCount") {
-         AZ_ED++;
-        }
-        else if (candidate === "elonCount") {
-         AZ_EL++;
-         }
-         break;
-
-    // ARKANSAS
-         case "AR" :
-        if (candidate === "edwardCount") {
-         AR_ED++;
-        }
-        else if (candidate === "elonCount") {
-         AR_EL++;
-         }
-         break;
-
-    // CALIFORNIA
-         case "CA" :
-        if (candidate === "edwardCount") {
-         CA_ED++;
-        }
-        else if (candidate === "elonCount") {
-         CA_EL++;
-         }
-         break;
-
-    // COLORADO
-         case "CO" :
-        if (candidate === "edwardCount") {
-         CO_ED++;
-        }
-        else if (candidate === "elonCount") {
-         CO_EL++;
-         }
-         break;
-
-    // CONNECTIUIT
-         case "MT" :
-        if (candidate === "edwardCount") {
-         MT_ED++;
-        }
-        else if (candidate === "elonCount") {
-         MT_EL++;
-         }
-         break;
-
-    // TEXAS
-         case "TX" :
-        if (candidate === "edwardCount") {
-         TX_ED++;
-        }
-        else if (candidate === "elonCount") {
-         TX_EL++;
-         }
-         break;
-
- // FLORIDA
-         case "FL" :
-        if (candidate === "edwardCount") {
-         FL_ED++;
-        }
-        else if (candidate === "elonCount") {
-         FL_EL++;
-         }
-         break;
-
-        default : alert("Please choose a state!");
-    }
-
-
-
+    else if (candidate === "elonCount")
+     {
+        eval(`${state.value}_EL ++`);
+     }
 
 // CHANGE COLOR BASED ON NUMBER OF VOTES
 if(eval(`${state.value}_ED`) || eval(`${state.value}_EL`) != 0) {
